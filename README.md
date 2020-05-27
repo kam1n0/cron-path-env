@@ -10,19 +10,19 @@ This can be exploited if the user has writeable access to a directory listed bef
 
 1) View the contents of the system-wide crontab:
 
-link to crontab
+![Image of cron_tab](https://github.com/kam1n0/cron-path-env/blob/master/tmp_upload/crontab.png)
 
 * Note the PATH variable starts with /home/user which is the current "user's" home directory.
 * By placing an 'overwrite.sh' script in the /home/user directory, the system will run this malcious shell script instead of the original overwrite.sh.
 
 2) Create a file named 'overwrite.sh' in the "user's" home directory with the following contents:
 
-link to overwrite.sh
+![Image of bin_bash](https://github.com/kam1n0/cron-path-env/blob/master/tmp_upload/bin_bash.png)
 
 3) Make overwrite.sh executable:
 
-link to execute
+![Image of overwrite](https://github.com/kam1n0/cron-path-env/blob/master/tmp_upload/overwrite.png)
 
 4) Wait for the cron job to run then execute '/tmp/rootbash -p' to gain a shell running with root privileges:
 
-link to rootbash
+![Image of rootbash](https://github.com/kam1n0/cron-path-env/blob/master/tmp_upload/rootbash.png)
